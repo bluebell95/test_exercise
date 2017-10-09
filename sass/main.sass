@@ -1,0 +1,132 @@
+@import "vars"
+@import "fonts"
+
+body
+	font-family: $default-font, sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	background-color: $grey-color
+
+
+.notification_wrap
+	max-width: 680px
+	min-height: 240px
+	background-color: #ccc
+	position: relative
+	margin-top: 100px
+	display: flex
+	justify-content: space-around
+	align-items: center	
+	.item_notification
+		height: 180px
+		width: 290px
+		background-color: $white-color
+		border-radius: 3px
+		-webkit-border-radius: 3px
+		-moz-border-radius: 3px
+		display: block
+		-webkit-filter: drop-shadow(0px 1px 3px rgba(70,70,70,1))
+		filter: drop-shadow(0px 1px 3px rgba(70,70,70,1))
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: -20px
+			left: 23px
+			border: 10px solid transparent
+			border-bottom: 10px solid $white-color
+		.item_information
+			padding: 23px
+		.inf_photo
+			width: 64px
+			height: 64px
+			background-color: $grey-color
+			display: inline-block
+			vertical-align: top
+		.inf_description
+			display: inline-block
+			padding-left: 23px
+			margin-top: -5px
+			h2
+				color: $black-color
+				margin: 0
+				padding: 0
+				font-size: 18px
+				font-family: "RobotoMedium", sans-serif
+			p
+				color: #a4a4a4
+				margin: 0
+				padding: 2px 0 0 0
+				line-height: 1.78
+				font-family: "RobotoMedium", sans-serif
+		.item_buttons
+			text-align: center
+			margin-top: 7px
+			.btn
+				display: inline-block
+				text-transform: uppercase
+				padding: 12px 20px
+				border-radius: 3px
+				&:hover
+					text-decoration: none
+				&.btn-blue
+					background-color: $blue-color
+					color: $white-color
+					float: left
+					margin-left: 23px
+					&:hover
+						background-color: darken($blue-color, 10%)
+						transition: all .5s ease
+				&.btn-grey
+					background-color: $grey-color
+					color: $black-color
+					float: right
+					margin-right: 23px
+					&:hover
+						background-color: darken($grey-color, 20%)
+						transition: all .5s ease
+						color: $white-color
+			&:before
+				content: ""
+				background-color: #f9f9f9
+				width: 100%
+				position: absolute
+				bottom: 0
+				left: 0
+				border-radius: 0 0 3px 3px
+				height: 70px
+				z-index: -1
+	.reverse
+		background-color: $dark-color
+		&:after
+			content: ""
+			position: absolute
+			top: 23px
+			left: 290px
+			border: 10px solid transparent
+			border-left: 10px solid $dark-color
+
+		.item_buttons
+			.btn.btn-grey
+				background-color: $dark-color
+				color: $white-color
+		.inf_description
+			h2
+				color: $white-color
+		.item_buttons:before
+			background-color: $black-color 
+
+
+	.tooltip-left
+		float: left
+		margin-left: 10px
+			
+	.tooltip-right
+		float: right
+		margin-right: 10px
+	
+		
